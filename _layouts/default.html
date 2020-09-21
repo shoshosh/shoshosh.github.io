@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
-    {% if page.title or page.title == 'me' %}
+    {% if page.title or page.title == 'ABOUT' %}
         <title>{{ page.title }}</title>
 		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     {% else %}
@@ -33,7 +33,7 @@
 			<ul id="tag-list">
 				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
 			<ul>
-				{% assign tags = site.tags | sort %}
+				{% assign tags = site.tags %}
 				{% for tag in tags %}
 				<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>
 				{% endfor %}
@@ -43,7 +43,7 @@
 		</div>
 		<div class="post_list">
 			{% unless page.date%}
-				{% if page.title == 'me' or page.title == '404...' %}
+				{% if page.title == 'ABOUT' or page.title == '404...' %}
 					<ul>
 						{% for post in site.posts %}
 						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
@@ -84,6 +84,9 @@
 			<div class="post_content">
         		{{ content }}
 				{% if page.title %}
+					{% if page.title != 'ABOUT' and page.title != '404...' %}
+ 				    	{% include disqus.html %}
+ 				    {% endif %}
 					{% include donate.html %}
 				{% endif %}
 			</div>

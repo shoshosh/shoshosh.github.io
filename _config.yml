@@ -1,10 +1,10 @@
 permalink: /:year:month:day/:title
-url: #Your url here
-baseurl: /project
+url: https://shoshosh.github.io
+baseurl: /shoshosh
 
 # variables
-name: Your Site Name
-description: Your description here
+name: WeBLog
+description: 공부하는 W e B L o g
 google_verification: null
 
 
@@ -23,3 +23,5 @@ kramdown:
   input: GFM
   syntax_highlighter_opts:
     disable : true
+    
+disqus-shortname: shoshosh

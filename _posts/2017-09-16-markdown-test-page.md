@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Markdown Test Page"
-tags: tag1 tag3
+tags: drawing study.spring.mvc HTML&CSS JavaScript Java DB&SQL Spring Git
 ---
 
 ## Source: [Markdown Test Page](https://github.com/fullpipe/markdown-test-page)
